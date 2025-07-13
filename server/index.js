@@ -29,7 +29,7 @@ app.post("/analyze", async (req, res) => {
   const sentimentResult = sentiment.analyze(journalText);
   const sentimentScore = sentimentResult.score;
 
-  const prompt = `Give motivational advice to someone who said: "${journalText}"`;
+  const prompt = `Give short motivational advice to someone who said: "${journalText}"`;
 
   try {
     const response = await axios.post(
